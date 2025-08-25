@@ -308,16 +308,10 @@ const ProblemsSection = () => {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gray-900 rounded-2xl p-8 shadow-xl max-w-4xl mx-auto border border-gray-800">
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              لا تضيع وقت أكثر. وخليني أشاركك السيستم اللي خلّى مدربين عاديين يضاعفو مبيعاتهم
-            </p>
-            
-            <CTAButton className="text-xl py-6 px-12">
-              <TrophyIcon className="w-8 h-8" />
-              احجز استشارة الان
-            </CTAButton>
-          </div>
+          <CTAButton className="text-xl py-6 px-12">
+            <TrophyIcon className="w-8 h-8" />
+            احجز استشارة الان
+          </CTAButton>
         </motion.div>
       </div>
     </section>
@@ -406,20 +400,10 @@ const SolutionsSection = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-8 max-w-3xl mx-auto">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="text-3xl">🚨</span>
-              <h3 className="text-2xl font-bold text-white">CTA واضح:</h3>
-            </div>
-            <p className="text-xl font-bold text-white mb-8">
-              لا تقعد تدور كل يوم على حل جديد لن يفيدك و ابدأ في طريق مجرب، واضح، خطواته محددة.
-            </p>
-            
-            <CTAButton variant="secondary" className="text-xl py-6 px-12 bg-white text-red-600 hover:bg-gray-100">
-              <StarIcon className="w-8 h-8" />
-              احجز استشارة الان
-            </CTAButton>
-          </div>
+          <CTAButton variant="secondary" className="text-xl py-6 px-12 bg-white text-red-600 hover:bg-gray-100">
+            <StarIcon className="w-8 h-8" />
+            احجز استشارة الان
+          </CTAButton>
         </motion.div>
       </div>
     </section>
@@ -512,17 +496,10 @@ const DeliverySection = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gray-900 rounded-2xl p-8 max-w-3xl mx-auto border border-gray-800">
-            <p className="text-xl text-white font-bold mb-8">
-              إنت مش بحاجة تتعب سنين عشان توصل لدخل ثابت
-              أنت بس بحاجة سيستم مجرب وشخص يرشدك فيه
-            </p>
-            
-            <CTAButton className="text-xl py-6 px-12">
-              <RocketLaunchIcon className="w-8 h-8" />
-              احجز استشارة الان
-            </CTAButton>
-          </div>
+          <CTAButton className="text-xl py-6 px-12">
+            <RocketLaunchIcon className="w-8 h-8" />
+            احجز استشارة الان
+          </CTAButton>
         </motion.div>
       </div>
     </section>
@@ -602,16 +579,10 @@ const TransformationSection = () => {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl p-8 max-w-3xl mx-auto">
-            <p className="text-xl font-bold text-white mb-8">
-              إذا كنت جاد تبدأ رحلتك نحو مشروع تدريبي مستقر
-            </p>
-            
-            <CTAButton variant="secondary" className="text-xl py-6 px-12 bg-white text-blue-600 hover:bg-gray-100">
-              <StarIcon className="w-8 h-8" />
-              احجز استشارة الان
-            </CTAButton>
-          </div>
+          <CTAButton variant="secondary" className="text-xl py-6 px-12 bg-white text-blue-600 hover:bg-gray-100">
+            <StarIcon className="w-8 h-8" />
+            احجز استشارة الان
+          </CTAButton>
         </motion.div>
       </div>
     </section>
@@ -644,40 +615,6 @@ const DecisionSection = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-800 mb-8">
-            <p className="text-xl text-gray-300 leading-relaxed mb-6">
-              إذا كنت مدرب تطمح يكون عندك دخل ثابت، ونظام شغال حتى وانت نايم
-            </p>
-            <p className="text-xl text-gray-300 leading-relaxed mb-6">
-              إذا تعبت من محاولات التسويق العشوائية، ومن انتظار العملاء، ومن الشعور إنك تستحق أكثر
-            </p>
-            <p className="text-xl text-white font-bold">
-              فـهذا السيستم مصمم خصيصًا لك.
-            </p>
-          </div>
-
-          <div className="bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-800 mb-8">
-            <p className="text-xl text-white font-bold mb-6">
-              ما في أسرار ولا لف ودوران.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              خطوات واضحة، نشتغل فيها سوا، خطوة بخطوة.
-            </p>
-          </div>
-
-          <div className="bg-red-900/50 rounded-2xl p-8 shadow-xl border border-red-800 mb-8">
-            <h3 className="text-2xl font-bold text-white mb-6">
-              لكن خليني أكون صريح معك:
-            </h3>
-            <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              إذا تجاهلت هذا العرض؟
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              رح ترجع لنفس الدوامة تكتب محتوى، تنشر، تنتظر وما في مبيعات.
-              أو تشتغل بجهد كبير، وتاخذ القليل.
-            </p>
-          </div>
-
           <div className="text-center">
             <CTAButton className="text-2xl py-8 px-16">
               <RocketLaunchIcon className="w-10 h-10" />
@@ -796,18 +733,10 @@ const FAQSection = () => {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-black rounded-2xl p-8 shadow-xl max-w-2xl mx-auto border border-gray-800">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              💬 لسّا عندك سؤال؟
-            </h3>
-            <p className="text-xl text-gray-300 mb-8">
-              راسلنا مباشرة، وإحنا معك خطوة بخطوة.
-            </p>
-            <CTAButton className="text-xl py-6 px-12">
-              <ChatBubbleBottomCenterTextIcon className="w-8 h-8" />
-              احجز استشارة الان
-            </CTAButton>
-          </div>
+          <CTAButton className="text-xl py-6 px-12">
+            <ChatBubbleBottomCenterTextIcon className="w-8 h-8" />
+            احجز استشارة الان
+          </CTAButton>
         </motion.div>
       </div>
     </section>

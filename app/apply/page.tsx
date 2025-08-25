@@ -11,9 +11,28 @@ export default function ApplyPage() {
     script.type = 'text/javascript'
     document.body.appendChild(script)
 
+    // Add CSS to ensure iframe scrolling works properly
+    const style = document.createElement('style')
+    style.textContent = `
+      iframe {
+        -webkit-overflow-scrolling: touch;
+      }
+      @media (max-width: 768px) {
+        iframe {
+          height: 700px !important;
+        }
+      }
+    `
+    document.head.appendChild(style)
+
     return () => {
-      // Cleanup script on unmount
-      document.body.removeChild(script)
+      // Cleanup script and style on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script)
+      }
+      if (document.head.contains(style)) {
+        document.head.removeChild(style)
+      }
     }
   }, [])
 
@@ -41,17 +60,18 @@ export default function ApplyPage() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden"
+          style={{ minHeight: '800px' }}
         >
           <iframe 
             src="https://api.leadconnectorhq.com/widget/booking/7TW9uC6bUaDPRE4vIQ2I" 
             style={{ 
               width: '100%', 
               border: 'none', 
-              overflow: 'hidden',
-              minHeight: '600px'
+              overflow: 'auto',
+              height: '800px'
             }} 
-            scrolling="no" 
             id="7TW9uC6bUaDPRE4vIQ2I_1756144638591"
+            title="احجز استشارة مجانية"
           ></iframe>
         </motion.div>
 

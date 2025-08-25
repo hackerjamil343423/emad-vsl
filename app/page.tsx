@@ -43,7 +43,6 @@ const scaleIn = {
 
 // VSL Video Component
 const VSLVideo = () => {
-  const [isPlaying, setIsPlaying] = useState(false)
   const videoRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(videoRef, { once: true })
 
@@ -55,32 +54,15 @@ const VSLVideo = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="relative w-full max-w-5xl mx-auto"
     >
-      <div className="relative aspect-video bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
-        {!isPlaying ? (
-          <motion.div
-            className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-900/30 to-purple-900/30 cursor-pointer"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => setIsPlaying(true)}
-          >
-            <motion.div
-              className="relative"
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <div className="absolute inset-0 bg-blue-500/30 rounded-full animate-ping"></div>
-              <PlayCircleIcon className="w-20 h-20 text-blue-400 drop-shadow-lg" />
-            </motion.div>
-            <div className="absolute bottom-6 left-6 right-6 text-white">
-              <h3 className="text-xl font-bold mb-2">شاهد كيف تحقق 12 ألف دولار خلال 3 أشهر</h3>
-              <p className="text-gray-300 text-sm">اكتشف السيستم المؤتمت الذي غير حياة المئات من المدربين</p>
-            </div>
-          </motion.div>
-        ) : (
-          <div className="w-full h-full bg-black flex items-center justify-center">
-            <p className="text-white text-xl">هنا سيتم تشغيل الفيديو</p>
-          </div>
-        )}
+      <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
+        <iframe
+          src="https://www.youtube.com/embed/O3sEzjK1jG0?si=6r_6rj6x0XUkzFOl&rel=0&showinfo=0&modestbranding=1"
+          title="سيستم طباعة الأموال - تحقيق 12 ألف دولار خلال 3 أشهر"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full"
+        ></iframe>
       </div>
     </motion.div>
   )

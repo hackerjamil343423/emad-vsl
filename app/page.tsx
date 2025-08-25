@@ -70,6 +70,10 @@ const VSLVideo = () => {
 
 // CTA Button Component
 const CTAButton = ({ children, className = "", variant = "primary", ...props }: any) => {
+  const handleClick = () => {
+    window.open('/apply', '_blank')
+  }
+
   return (
     <motion.button
       className={`
@@ -82,6 +86,7 @@ const CTAButton = ({ children, className = "", variant = "primary", ...props }: 
       `}
       whileHover={{ scale: 1.05, y: -2 }}
       whileTap={{ scale: 0.95 }}
+      onClick={handleClick}
       {...props}
     >
       <span className="relative z-10 flex items-center justify-center gap-2">
@@ -215,7 +220,7 @@ const HeroSection = () => {
           >
             <CTAButton className="text-xl md:text-2xl py-6 px-12 animate-pulse">
               <RocketLaunchIcon className="w-8 h-8" />
-              سجل الان
+              احجز استشارة الان
             </CTAButton>
           </motion.div>
         </motion.div>
@@ -310,7 +315,7 @@ const ProblemsSection = () => {
             
             <CTAButton className="text-xl py-6 px-12">
               <TrophyIcon className="w-8 h-8" />
-              سجل الان
+              احجز استشارة الان
             </CTAButton>
           </div>
         </motion.div>
@@ -412,7 +417,7 @@ const SolutionsSection = () => {
             
             <CTAButton variant="secondary" className="text-xl py-6 px-12 bg-white text-red-600 hover:bg-gray-100">
               <StarIcon className="w-8 h-8" />
-              سجل الان
+              احجز استشارة الان
             </CTAButton>
           </div>
         </motion.div>
@@ -515,7 +520,7 @@ const DeliverySection = () => {
             
             <CTAButton className="text-xl py-6 px-12">
               <RocketLaunchIcon className="w-8 h-8" />
-              سجل الان
+              احجز استشارة الان
             </CTAButton>
           </div>
         </motion.div>
@@ -604,7 +609,7 @@ const TransformationSection = () => {
             
             <CTAButton variant="secondary" className="text-xl py-6 px-12 bg-white text-blue-600 hover:bg-gray-100">
               <StarIcon className="w-8 h-8" />
-              سجل الان
+              احجز استشارة الان
             </CTAButton>
           </div>
         </motion.div>
@@ -676,7 +681,7 @@ const DecisionSection = () => {
           <div className="text-center">
             <CTAButton className="text-2xl py-8 px-16">
               <RocketLaunchIcon className="w-10 h-10" />
-              احجز مقعدك الآن
+              احجز استشارة الان
             </CTAButton>
           </div>
         </motion.div>
@@ -800,7 +805,7 @@ const FAQSection = () => {
             </p>
             <CTAButton className="text-xl py-6 px-12">
               <ChatBubbleBottomCenterTextIcon className="w-8 h-8" />
-              سجل الان وراسلنا
+              احجز استشارة الان
             </CTAButton>
           </div>
         </motion.div>
@@ -892,8 +897,9 @@ const ModernHeader = () => {
               className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2 rounded-full font-bold text-sm hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -1 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => window.open('/apply', '_blank')}
             >
-              سجل الان
+              احجز استشارة الان
             </motion.button>
           </nav>
         </motion.div>
@@ -952,7 +958,7 @@ export default function Home() {
             </p>
             <CTAButton className="text-2xl py-8 px-16">
               <RocketLaunchIcon className="w-10 h-10" />
-              احجز مقعدك الآن
+              احجز استشارة الان
             </CTAButton>
           </motion.div>
         </div>
